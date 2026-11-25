@@ -1,0 +1,7 @@
+node_modules
+dist
+.vercel
+public/fotos.json
+public/album/thumbs
+.DS_Store
+decor-src

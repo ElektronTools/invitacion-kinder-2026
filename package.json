@@ -1,0 +1,29 @@
+{
+  "name": "invitacion-graduacion-inicial-2026",
+  "private": true,
+  "version": "3.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "album": "node scripts/album.mjs",
+    "predev": "npm run album && npm run decor",
+    "dev": "vite",
+    "prebuild": "npm run album && npm run decor",
+    "build": "vite build && node scripts/compress.mjs",
+    "preview": "vite preview",
+    "decor": "node scripts/decor.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
