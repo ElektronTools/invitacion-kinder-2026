@@ -238,9 +238,26 @@ main {
 }
 
 /* Fotos individuales del Inicial B */
-.alumno-con-foto { min-height: 112px; padding: 10px 34px 10px 10px; }
-.alumno-foto-btn { flex: none; display: block; padding: 0; border: 0; border-radius: 18px; background: transparent; line-height: 0; cursor: zoom-in; transition: transform .25s, filter .25s; }\n.alumno-foto-btn:hover { transform: scale(1.06); filter: drop-shadow(0 5px 12px rgba(255,209,102,.25)); }\n.alumno-foto { flex: none; display: block; width: 112px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; border: 1px solid var(--glass-b); background: var(--glass); }
-.alumno-foto-btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }\n.alumno-foto-vacia { display: grid; place-items: center; color: var(--muted); font-size: 1.8rem; border-style: dashed; }
+.alumno-con-foto { min-height: 136px; padding: 10px 34px 10px 10px; }
+.alumno-foto-btn {
+  flex: none; display: block; padding: 0; border: 0; border-radius: 18px;
+  background: transparent; line-height: 0; cursor: zoom-in;
+  transition: transform .25s, filter .25s;
+}
+.alumno-foto-btn:hover { transform: scale(1.06); filter: drop-shadow(0 5px 12px rgba(255,209,102,.25)); }
+.alumno-foto {
+  flex: none; display: block; width: 112px; aspect-ratio: 1 / 1;
+  object-fit: cover; object-position: center; border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  background: var(--glass); box-shadow: 0 8px 18px rgba(4, 7, 30, .28);
+}
+.alumno-foto-btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.alumno-foto-vacia { display: grid; place-items: center; color: var(--muted); font-size: 1.8rem; border-style: dashed; }
+
+@media (min-width: 901px) {
+  .alumno-con-foto { min-height: 156px; padding: 12px 38px 12px 12px; }
+  .alumno-foto { width: 132px; border-radius: 16px; }
+}
 
 .nombre { font-weight: 700; font-size: 0.92rem; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.01em; overflow-wrap: anywhere; }
 .estrella {
