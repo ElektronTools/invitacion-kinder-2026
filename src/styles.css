@@ -255,8 +255,15 @@ main {
 .alumno-foto-vacia { display: grid; place-items: center; color: var(--muted); font-size: 1.8rem; border-style: dashed; }
 
 @media (min-width: 901px) {
-  .alumno-con-foto { min-height: 156px; padding: 12px 38px 12px 12px; }
-  .alumno-foto { width: 132px; border-radius: 16px; }
+  .alumno-con-foto {
+    display: grid; grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-rows: auto auto; align-items: center; column-gap: 10px; row-gap: 10px;
+    min-height: 214px; padding: 14px 38px 14px 14px;
+  }
+  .alumno-foto-btn { grid-column: 1 / -1; justify-self: center; }
+  .alumno-foto { width: 128px; border-radius: 16px; }
+  .alumno-con-foto .num { grid-column: 1; grid-row: 2; }
+  .alumno-con-foto .nombre { grid-column: 2; grid-row: 2; min-width: 0; }
 }
 
 .nombre { font-weight: 700; font-size: 0.92rem; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.01em; overflow-wrap: anywhere; }
